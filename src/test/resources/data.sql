@@ -1,0 +1,18 @@
+DROP TABLE IF EXISTS SCORES;
+ 
+CREATE TABLE SCORES (
+
+    ID_SCORE    INT AUTO_INCREMENT PRIMARY KEY,
+    LOCAL_TEAM  VARCHAR(250) NOT NULL,
+    LOCAL_TEAM_GOALS INT NOT NULL,
+    AWAY_TEAM   VARCHAR(250) NOT NULL,
+    AWAY_TEAM_GOALS INT NOT NULL,
+    IS_FINISH_MATCH BOOLEAN NOT NULL
+);
+
+INSERT INTO SCORES (LOCAL_TEAM, LOCAL_TEAM_GOALS, AWAY_TEAM, AWAY_TEAM_GOALS, IS_FINISH_MATCH) VALUES
+  ('Mexico', 0, 'Canada', 5, false),
+  ('Spain', 10, 'Brazil', 2, false),
+  ('Germany', 2, 'France', 2, false),
+  ('Uruguay', 6, 'Italy', 6, false),
+  ('Argentina', 3, 'Australia', 1, false);
